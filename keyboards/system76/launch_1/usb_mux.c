@@ -378,9 +378,9 @@ int ptn5110_source_update(struct PTN5110 * self) {
 }
 
 void usb_mux_event(void) {
-    // Run this on every 1000th matrix scan
+    // Run this on every 65535th matrix scan
     static int cycle = 0;
-    if (cycle >= 1000) {
+    if (cycle == 65535) {
         cycle = 0;
         ptn5110_source_update(&usb_source_left);
         ptn5110_source_update(&usb_source_right);

@@ -24,7 +24,10 @@
 #define DIODE_DIRECTION COL2ROW
 
 /* Set 0 if debouncing isn't needed */
-#define DEBOUNCE 5
+#define DEBOUNCE 0
+
+/* Decrease polling interval */
+#define USB_POLLING_INTERVAL_MS 0.01
 
 // NKRO must be used
 #define FORCE_NKRO
